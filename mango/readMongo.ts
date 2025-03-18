@@ -42,3 +42,17 @@ export function readCompetence(Client: MongoClient, id: number) {
     const competenceCollection: Collection<Document> = Client.db("SEL").collection("competences");
     return competenceCollection.findOne({ code_competence: id });
 }
+
+export async function readCommentOfTransaction(Client: MongoClient, id: number) {
+    const transactionCollection: Collection<Transaction> = Client.db("SEL").collection("transactions");
+    const transaction: Transaction | null = await transactionCollection.findOne({ code_transaction: id });
+
+    if (!transaction) {
+        console.log(`Transaction with id ${id} not found`);
+        return;
+    }
+
+    const commentCollection: Collection<Document> = Client.db("SEL").collection("comments");
+
+    return commentCollection.find({ code_comment: { $in: transaction.comments } }).toArray();
+}

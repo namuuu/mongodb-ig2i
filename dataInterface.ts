@@ -23,14 +23,14 @@ interface Transaction {
     date_previsionnelle: string;
     valorisation_theorique: number;
     valorisation_effective: number;
-    comments: Comments[];
+    comments: string[];
 }
 
 interface Comments {
     code_comment: string;
     code_membre: number;
     message: string;
-    comments: Comments[];
+    comments: string[];
 }
 
 interface Member {

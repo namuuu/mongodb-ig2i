@@ -11,6 +11,7 @@ async function main() {
         await Mongo.add.addAllTransactions(Mongo.client, DataGenerator.transactions);
         await Mongo.add.addAllServices(Mongo.client, DataGenerator.services);
         await Mongo.add.addAllCompetences(Mongo.client, competences);
+        await Mongo.add.addAllComments(Mongo.client, DataGenerator.comments);
     } finally {
         Mongo.close();
     }

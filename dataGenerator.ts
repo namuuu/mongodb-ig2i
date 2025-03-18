@@ -5,6 +5,7 @@ import competences from './db/competences.json';
 export const members: Array<Member> = [];
 export let services: Array<Service>;
 export let transactions: Array<Transaction>;
+export let comments: Array<Comments> = [];
 
 // Pre-written values
 const tagsValues = ['#cooking', '#cool', '#yay']
@@ -93,13 +94,13 @@ function generateTransactions(quantity: number) {
 }
 
 function generateComments(quantity: number, depth: number = 0) {
-    const comments: Array<Comments> = [];
+    const commentsHere: Array<Comments> = [];
     depth++;
 
     for (let i = 0; i < quantity; i++) {
         const randomMemberId = faker.number.int({ min: 1, max: members.length });
 
-        comments.push({
+        commentsHere.push({
             code_comment: faker.string.uuid(),
             code_membre: randomMemberId,
             message: faker.lorem.sentence(),
@@ -107,7 +108,10 @@ function generateComments(quantity: number, depth: number = 0) {
         });
     }
 
-    return comments;
+    comments.push(...commentsHere);
+
+    // Return every code_comment from comments
+    return commentsHere.map(comment => comment.code_comment);
 }
 
 function generateCotisation(quantity: number): Cotisation[] {
@@ -141,6 +145,10 @@ export function generateAll()
     transactions = generateTransactions(5);
     fs.writeFileSync('db/transactions.json', JSON.stringify(transactions));
     // console.debug(JSON.stringify(transactions[1], null, 2));
+
+    fs.writeFileSync('db/comments.json', JSON.stringify(comments));
+
+
 
     return members;
 }

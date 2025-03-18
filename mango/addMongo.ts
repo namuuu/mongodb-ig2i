@@ -42,3 +42,13 @@ export async function addAllCompetences(client: MongoClient, competences) {
     console.log(`${result.insertedCount} competences were inserted.`);
 }
 
+export async function addAllComments(client: MongoClient, comments) {
+    const commentCollection: Collection<Document> = client.db("SEL").collection("comments");
+
+    await commentCollection.deleteMany({});
+
+    const result: InsertManyResult = await commentCollection.insertMany(comments);
+
+    console.log(`${result.insertedCount} comments were inserted.`);
+}
+
