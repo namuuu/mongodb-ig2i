@@ -8,7 +8,7 @@ async function main() {
         const startTime = Date.now();
 
         // await Mongo.edit.addCommentToTransaction(Mongo.client, 1, "This is my newish comment", 1);
-        const comments = await Mongo.read.readCommentOfTransaction(Mongo.client, 1);
+        const comments = await Mongo.read.readCommentsOfTransaction(Mongo.client, 1);
 
         console.log(comments);
 

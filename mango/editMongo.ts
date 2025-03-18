@@ -31,31 +31,31 @@ export async function addCommentToTransaction(client: MongoClient, transactionId
     console.log(`Comment added with id ${newCommentId} with text "${comment}"`);
 }
 
-// export async function addCommentToComment(client: MongoClient, commentId: number, comment: string, memberId: number) {
-//     const collection = client.db("SEL").collection("transactions");
+export async function addCommentToComment(client: MongoClient, commentId: number, comment: string, memberId: number) {
+    const commentCollection = client.db("SEL").collection("comments");
 
-//     const transaction = await collection.findOne({ code_transaction: transactionId });
+    const originalComment = await commentCollection.findOne({ code_comment: commentId });
 
-//     if (!transaction) {
-//         console.log(`Transaction with id ${transactionId} not found`);
-//         return;
-//     }
+    if (!originalComment) {
+        console.log(`Comment with id ${commentId} not found`);
+        return;
+    }
 
-//     const comment = transaction.comments.find(comment => comment.code_comment === transactionId);
+    const newCommentId = faker.string.uuid();
 
-//     if (!comment) {
-//         console.log(`Comment with id ${transactionId} not found`);
-//         return;
-//     }
+    originalComment.comments.push(newCommentId);
 
-//     comment.comments.push({
-//         code_comment: faker.string.uuid(),
-//         code_membre: memberId,
-//         message: comment,
-//         comments: []
-//     })
+    await commentCollection.updateOne({ code_comment: commentId }, { $set: { comments: originalComment.comments } });
 
-//     console.log(`Comment added to comment with id ${commentId}`);
+    console.log(`Comment id ${newCommentId} added to comment with id ${commentId}`);
 
-//     await collection.updateOne({ code_transaction: transactionId }, { $set: { comments: transaction.comments } });
-// }
+    await commentCollection.insertOne({
+        code_comment: newCommentId,
+        code_membre: memberId,
+        message: comment,
+        comments: []
+    });
+
+    console.log(`Comment added with id ${newCommentId} with text "${comment}"`);
+}
+

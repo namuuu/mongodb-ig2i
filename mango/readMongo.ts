@@ -43,7 +43,7 @@ export function readCompetence(Client: MongoClient, id: number) {
     return competenceCollection.findOne({ code_competence: id });
 }
 
-export async function readCommentOfTransaction(Client: MongoClient, id: number) {
+export async function readCommentsOfTransaction(Client: MongoClient, id: number) {
     const transactionCollection: Collection<Transaction> = Client.db("SEL").collection("transactions");
     const transaction: Transaction | null = await transactionCollection.findOne({ code_transaction: id });
 
@@ -52,7 +52,19 @@ export async function readCommentOfTransaction(Client: MongoClient, id: number) 
         return;
     }
 
-    const commentCollection: Collection<Document> = Client.db("SEL").collection("comments");
+    const commentCollection: Collection<Comments> = Client.db("SEL").collection("comments");
 
     return commentCollection.find({ code_comment: { $in: transaction.comments } }).toArray();
+}
+
+export async function readCommentsOfComment(Client: MongoClient, id: string) {
+    const commentCollection: Collection<Comments> = Client.db("SEL").collection("comments");
+    const comment: Comments | null = await commentCollection.findOne({ code_comment: id });
+
+    if (!comment) {
+        console.log(`Comment with id ${id} not found`);
+        return;
+    }
+
+    return commentCollection.find({ code_comment: { $in: comment.comments } }).toArray();
 }
