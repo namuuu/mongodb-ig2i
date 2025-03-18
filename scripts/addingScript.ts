@@ -1,5 +1,5 @@
 import * as Mongo from '../mango/MongoHandler';
-import * as DataGenerator from '../data_generator';
+import * as DataGenerator from '../dataGenerator';
 import competences from '../db/competences.json';
 
 async function main() {
