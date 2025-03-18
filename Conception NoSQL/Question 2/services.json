@@ -1,0 +1,18 @@
+{
+    "services": [
+      {
+        "code_service": 1,
+        "code_membre" : 1,
+        "description": "Service description",
+        "valorisation": 100,
+        "type_valorisation": "Type",
+        "date_debut": "2021-01-01",
+        "date_fin": "2021-12-31",
+        "code_talent": 1,
+        "tags": [
+            {"code_tag": 1},
+            {"code_tag": 2}
+        ]
+      }
+    ]
+}

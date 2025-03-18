@@ -1,0 +1,83 @@
+{
+    "membres": [
+    {
+      "code_membre": 1,
+      "nom": "Doe",
+      "prenom": "John",
+      "date_de_naissance": "1990-01-01",
+      "mail": "mail@example.com",
+      "compte_temps": 100,
+      "attentes": "attentes",
+      "gouts": "gouts",
+      "ville_id": 1,
+      "status": 1,
+      "adherents": [
+        {
+          "code_tarif": 1,
+          "date_adhesion": "2021-01-01"
+        }
+      ],
+      "talents": [
+        {
+          "code_talent": 1,
+          "code_competence": 1,
+          "niveau_experience": 5
+        }
+      ],
+        "transactions": [
+          {
+            "code_transaction": 1,
+            "valorisation_theorique": 100,
+            "valorisation_effective": 90,
+            "date_previsionnelle": "2021-02-01",
+            "date_effective": "2021-02-02",
+            "duree_effective": 1,
+            "etat": "completed",
+            "code_service": 1,
+            "beneficiaire": 2,
+            "commentaires": [
+              {
+                "id" : 1,
+                "nom" : "Dupont",
+                "prenom" : "Michel",
+                "commentaire" : "Super !",
+                "commentaireConcerne" : null,
+                "code_transaction" : 1
+              },
+              {
+                "id" : 4,
+                "nom" : "Dujardin",
+                "prenom" : "Jean",
+                "commentaire" : "Un peu de mal a te croire Michel !",
+                "commentaireConcerne" : 1,
+                "code_transaction" : 1 
+              }
+            ]
+          },
+          {
+            "code_transaction": 2,
+            "valorisation_.0theorique": 200,
+            "valorisation_effective": 190,
+            "date_previsionnelle": "2021-03-01",
+            "date_effective": "2021-03-02",
+            "duree_effective": 1,
+            "etat": "completed",
+            "code_service": 1,
+            "beneficiaire": 2
+          },
+          {
+            "code_transaction": 3,
+            "valorisation_theorique": 300,
+            "valorisation_effective": 290,
+            "date_previsionnelle": "2021-04-01",
+            "date_effective": "2021-04-02",
+            "duree_effective": 1,
+            "etat": "completed",
+            "code_service": 1,
+            "beneficiaire": 2
+          }
+        ]
+      }
+      
+    ]
+  }

@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "add": "npx tsx ./scripts/addingScript.ts",
+    "read": "npx tsx scripts/readingScript.ts",
+    "comment": "npx tsx scripts/commentScript.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "mongodb": "^6.14.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3"
+  }
+}

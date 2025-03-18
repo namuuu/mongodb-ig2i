@@ -1,0 +1,9 @@
+{
+    "tarifs": [
+    {
+      "code_tarif": 1,
+      "montant": 100,
+      "annee": 2021
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+    "villes": [
+        {
+            "rue" : "rue de la paix",
+            "nom": "Paris",
+            "code_postal": "75000"
+        },
+        {
+            "rue" : "rue de la liberté",
+            "nom": "Lyon",
+            "code_postal": "69000"
+        },
+        {
+            "rue" : "rue de la fraternité",
+            "nom": "Marseille",
+            "code_postal": "13000"
+        },
+        {
+            "rue" : "rue de l'égalité",
+            "nom": "Toulouse",
+            "code_postal": "31000"
+        },
+        {
+            "rue" : "rue de la justice",
+            "nom": "Bordeaux",
+            "code_postal": "33000"
+        },
+        {
+            "rue" : "rue de la solidarité",
+            "nom": "Nantes",
+            "code_postal": "44000"
+        },
+        {
+            "rue" : "rue de la fraternité",
+            "nom": "Lille",
+            "code_postal": "59000"
+        },
+        {
+            "rue" : "rue de la liberté",
+            "nom": "Strasbourg",
+            "code_postal": "67000"
+        },
+        {
+            "rue" : "rue de la paix",
+            "nom": "Nice",
+            "code_postal": "06000"
+        },
+        {
+            "rue" : "rue de la justice",
+            "nom": "Rennes",
+            "code_postal": "35000"
+        }
+    ]
+}

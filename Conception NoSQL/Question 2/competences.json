@@ -1,0 +1,9 @@
+{
+    "competences": [
+      {
+        "code_competence": 1,
+        "description": "Competence description",
+        "categorie": "Category"
+      }
+    ]
+}

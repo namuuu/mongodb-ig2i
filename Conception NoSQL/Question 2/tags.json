@@ -1,0 +1,12 @@
+{
+    "tags": [
+    {
+      "code_tag": 1,
+      "libelle": "Tag 1"
+    },
+    {
+      "code_tag": 2,
+      "libelle": "Tag 2"
+    }
+  ]
+}

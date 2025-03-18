@@ -1,0 +1,17 @@
+[
+    {
+        "code_competence": 1,
+        "description": "La cuisine",
+        "categorie": "Cuisine"
+    },
+    {
+        "code_competence": 2,
+        "description": "La pâtisserie",
+        "categorie": "Patissier"
+    },
+    {
+        "code_competence": 3,
+        "description": "Doing stuff",
+        "categorie": "Bricolage"
+    }
+]

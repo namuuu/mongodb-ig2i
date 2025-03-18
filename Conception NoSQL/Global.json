@@ -1,0 +1,176 @@
+{
+    "membres": [
+      {
+        "code_membre": 1,
+        "nom": "Doe",
+        "prenom": "John",
+        "date_de_naissance": "1990-01-01",
+        "mail": "mail@example.com",
+        "compte_temps": 100,
+        "attentes": "attentes",
+        "gouts": "gouts",
+        "ville_id": 1,
+        "status": 1,
+        "adherents": [
+          {
+            "code_tarif": 1,
+            "date_adhesion": "2021-01-01"
+          }
+        ],
+        "talents": [
+          {
+            "code_talent": 1,
+            "code_competence": 1,
+            "niveau_experience": 5
+          }
+        ],
+        "transactions": [
+          {
+            "code_transaction": 1,
+            "valorisation_theorique": 100,
+            "valorisation_effective": 90,
+            "date_previsionnelle": "2021-02-01",
+            "date_effective": "2021-02-02",
+            "etat": "completed",
+            "code_service": 1
+          },
+          {
+            "code_transaction": 2,
+            "valorisation_theorique": 200,
+            "valorisation_effective": 190,
+            "date_previsionnelle": "2021-03-01",
+            "date_effective": "2021-03-02",
+            "etat": "completed",
+            "code_service": 1
+          },
+          {
+            "code_transaction": 3,
+            "valorisation_theorique": 300,
+            "valorisation_effective": 290,
+            "date_previsionnelle": "2021-04-01",
+            "date_effective": "2021-04-02",
+            "etat": "completed",
+            "code_service": 1
+          }
+        ]
+      }
+    ],
+    "services": [
+      {
+        "code_service": 1,
+        "description": "Service description",
+        "valorisation": 100,
+        "type_valorisation": "Type",
+        "date_debut": "2021-01-01",
+        "date_fin": "2021-12-31",
+        "code_talent": 1,
+        "tags": [
+            {"code_tag": 1},
+            {"code_tag": 2}
+        ]
+      }
+    ],
+    "tags": [
+      {
+        "code_tag": 1,
+        "libelle": "Tag 1"
+      },
+      {
+        "code_tag": 2,
+        "libelle": "Tag 2"
+      }
+    ],
+    "tarifs": [
+        {
+        "code_tarif": 1,
+        "montant": 100,
+        "annee": 2021
+        }
+    ],
+    "commentaires" : [
+        {
+            "id" : 1,
+            "nom" : "Dupont",
+            "prenom" : "Michel",
+            "commentaire" : "Super !",
+            "commentaireConcerne" : null,
+            "code_transaction" : 1
+        },
+        {
+            "id" : 2,
+            "nom" : "Durand",
+            "prenom" : "Paul",
+            "commentaire" : "J'adore !",
+            "commentaireConcerne" : null,
+            "code_transaction" : 2
+        },
+        {
+            "id" : 3,
+            "nom" : "Dujardin",
+            "prenom" : "Jean",
+            "commentaire" : "Bof Bof !",
+            "commentaireConcerne" : null,
+            "code_transaction" : 3
+        },
+        {
+            "id" : 4,
+            "nom" : "Dujardin",
+            "prenom" : "Jean",
+            "commentaire" : "Un peu de mal a te croire !",
+            "commentaireConcerne" : 1,
+            "code_transaction" : 1 
+        }
+    ],
+    "villes": [
+        {
+            "rue" : "rue de la paix",
+            "nom": "Paris",
+            "code_postal": "75000"
+        },
+        {
+            "rue" : "rue de la liberté",
+            "nom": "Lyon",
+            "code_postal": "69000"
+        },
+        {
+            "rue" : "rue de la fraternité",
+            "nom": "Marseille",
+            "code_postal": "13000"
+        },
+        {
+            "rue" : "rue de l'égalité",
+            "nom": "Toulouse",
+            "code_postal": "31000"
+        },
+        {
+            "rue" : "rue de la justice",
+            "nom": "Bordeaux",
+            "code_postal": "33000"
+        },
+        {
+            "rue" : "rue de la solidarité",
+            "nom": "Nantes",
+            "code_postal": "44000"
+        },
+        {
+            "rue" : "rue de la fraternité",
+            "nom": "Lille",
+            "code_postal": "59000"
+        },
+        {
+            "rue" : "rue de la liberté",
+            "nom": "Strasbourg",
+            "code_postal": "67000"
+        },
+        {
+            "rue" : "rue de la paix",
+            "nom": "Nice",
+            "code_postal": "06000"
+        },
+        {
+            "rue" : "rue de la justice",
+            "nom": "Rennes",
+            "code_postal": "35000"
+        }
+    ]
+}
